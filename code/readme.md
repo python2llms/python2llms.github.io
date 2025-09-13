@@ -10,7 +10,7 @@ Buy on Amazon: https://www.amazon.com/dp/1733902201.
 
 # Code
 
-This repository provides Python code for the first 6 chapters of the *Python, Deep Learning, and LLMs* book -- in Jupyter notebook .ipynb format.
+This repository provides Python code for the first 6 chapters of the *Python, Deep Learning, and LLMs* book – in Jupyter notebook .ipynb format.
 
 To ensure reproducibility, you may want to work with the software library versions used when the book was compiled, which can be conveniently done by setting up a *virtual environment*. 
 
