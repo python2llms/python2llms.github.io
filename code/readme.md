@@ -14,7 +14,7 @@ This repository provides Python code for the first 6 chapters of the *Python, De
 
 To ensure reproducibility, you may want to work with the software library versions used when the book was compiled, which can be conveniently done by setting up a *virtual environment*. 
 
-After installing the Anaconda distribution of Python (as instructed in the first chapter of the book), you can set up the virtual environment using the provided `python2llmsenv.yaml` file. 
+After installing the Anaconda distribution of Python (as instructed in the first chapter of the book), you can set up the virtual environment using the `python2llmsenv.yaml` file – also provided here. 
 
 Download this file into the folder you are working from (your working directory) and execute the following lines of shell code via your command line interface from inside that working directory:
 
