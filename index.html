@@ -9,6 +9,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
   <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
   <link rel="alternate" type="application/x-bibtex" href="/assets/python2llms.bib">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQX16JH29P"></script>
   <script>
@@ -38,6 +41,9 @@
       font-size: 1.3em;
       border-bottom: 1px solid #ddd;
       padding-bottom: 0.2em;
+    }
+    p {
+      text-align: justify;
     }
     .cover {
       max-width: 250px;
@@ -72,7 +78,7 @@
     .amazon:hover {
       background: #024b9a;
     }
-    .bibtex {
+    pre {
       background: Gainsboro;
       padding: 10px;
       border-radius: 4px;
@@ -88,14 +94,14 @@
   <p>
     <a class="amazon" href="https://www.amazon.com/dp/1733902201" target="_blank">Buy on Amazon</a>
   </p>
-  <p style="text-align: justify;">
+  <p>
     This book is a coding and machine learning bootcamp in textbook form. You will get hands-on experience with the Python programming language, essential math concepts, neural nets – and, by the end, you will have coded and trained a pocket-sized language model. A high school math background is all you need to get started; no prior programming experience is required. Put in the work, and soon you will know, in concrete detail, how to create a miniature mind inside a chunk of silicon using code. If that is not magic, what is?
   </p>
 
   <h1>Citing the book</h1>
 <p>To cite this book, please use this bibtex entry:</p>
 
-<pre id="my-bibtex" class="bibtex" tabindex="0">
+<pre tabindex="0">
 @book{tkachenko2025python2llms,
   author={Tkachenko, Yegor},
   title={Python, Deep Learning, and LLMs: 
@@ -105,6 +111,14 @@
   note={\url{https://python2llms.org/}}
 }
 </pre>
+
+  <h1>Code</h1>
+
+  <p>
+    Key parts of Python code from the book are available via a GitHub repository.
+  </p>
+
+
 
   <h1>Data</h1>
 
