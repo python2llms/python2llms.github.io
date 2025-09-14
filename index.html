@@ -15,6 +15,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
   <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
   <link rel="alternate" type="application/x-bibtex" href="/assets/python2llms.bib">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQX16JH29P"></script>
@@ -43,7 +45,7 @@
     h2 {
       margin-top: 2em;
       font-size: 1.3em;
-      border-bottom: 1px solid #ddd;
+      /*border-bottom: 1px solid #ddd;*/
       padding-bottom: 0.2em;
     }
     p {
@@ -53,12 +55,12 @@
       max-width: 250px;
       margin: 20px 0;
     }
-    .chapters {
+    .samples {
       width: 100%;
       border-collapse: collapse;
       margin-top: 1em;
     }
-    .chapters th, .chapters td {
+    .samples th, .samples td {
       border-bottom: 1px solid #eee;
       padding: 8px;
       text-align: left;
@@ -87,6 +89,23 @@
       padding: 10px;
       border-radius: 4px;
     }
+    .toc {
+      font-family: "EB Garamond", serif;
+      font-size: clamp(1.2rem, 1rem + 1vw, 2rem);
+      line-height: 1.5;
+      margin: 1rem 0;
+      padding-left: 1.25rem;          /* small indent for numbers */
+      list-style: none;
+      font-style: italic;
+    }
+    .toc a {  
+      text-decoration: none; 
+      /*text-decoration: underline;*/
+      /*   text-decoration-color: #0065bf;*/
+      text-underline-offset: 5px;
+      /*color: inherit;*/
+    }
+    .toc a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -102,7 +121,7 @@
     This book is a coding and machine learning bootcamp in textbook form. You will get hands-on experience with the Python programming language, essential math concepts, neural nets – and, by the end, you will have coded and trained a pocket-sized language model. A high school math background is all you need to get started; no prior programming experience is required. Put in the work, and soon you will know, in concrete detail, how to create a miniature mind inside a chunk of silicon using code. If that is not magic, what is?
   </p>
 
-  <h1>Citing the book</h1>
+  <h2>Citing the book</h2>
 <p>To cite this book, please use this bibtex entry:</p>
 
 <pre tabindex="0">
@@ -116,19 +135,38 @@
 }
 </pre>
 
-  <h1>Code</h1>
+<h2>Contents</h2>
+
+  <p>
+    (Selected samples are provided for non-commercial use only.)
+  </p>
+
+  <ol class="toc">
+    <li><a href="https://www.dropbox.com/scl/fi/5svshb32sg45f9su7odvs/python2llms_frontmatter.pdf?rlkey=sna9nqawp1evzubvdv1hkw2ji&dl=1">Frontmatter</a></li>
+    <li><a href="https://www.dropbox.com/scl/fi/z7hrcfa8jeynpruo0f7op/python2llms_ch1.pdf?rlkey=l82cfi6545vstjx7vvqcvhimd&dl=1">1 Python programming basics</a></li>
+    <li>2 Arrays of numbers and their algebra</li>
+    <li>3 Randomness and probabilities</li>
+    <li>4 Regression models</li>
+    <li>5 Deep learning</li>
+    <li>6 Language models for text prediction</li>
+    <li>7 In pursuit of artificial intelligence</li>
+    <li><a href="https://www.dropbox.com/scl/fi/eefq2uzmtdq631wul52l0/python2llms_aboutauthor.pdf?rlkey=ewxygv2hv8qm0ic65feqwom28&dl=1">About the author</a></li>
+    <li><a href="https://www.dropbox.com/scl/fi/09obosqjr0tefnnjf8mrw/python2llms_index.pdf?rlkey=ilpwspgcav51ohwa7jhsqjsox&dl=1">Index</a></li>
+  </ol>
+
+  <h2>Code</h2>
 
   <p>
     <a href="https://github.com/python2llms/python2llms.github.io/tree/main/code" target="_blank">Python code</a> from the book is available on GitHub.
   </p>
 
-  <h1>Data</h1>
+  <h2>Data</h2>
 
   <p>
     You can download the <a href="https://www.dropbox.com/scl/fi/jd3djyf2li2a41ppok9kv/datasets.zip?rlkey=57ye8c8zah5mykl5r4fp2y74j&dl=1" target="_blank">data sets</a> utilized in the book as a single ~350 MB .zip archive. This backup is provided for reproducibility – in case the URLs referenced in the book die or the linked material is updated.
   </p>
 
-  <h1 style="margin-top:30px;">Misc.</h1>
+  <h2>Misc.</h2>
 
   <p>
     If you notice any typos, do not hesitate to contact the author directly by <a href="mailto:yegor.tkachenko@columbia.edu">email</a>.
