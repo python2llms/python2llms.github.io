@@ -94,29 +94,62 @@
 
   <!-- Event snippet for Outbound click conversion page
   In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-  <script>
+  <!--   <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17747888998/fa7pCN-M_cMbEOaW7Y5C',
+          'value': 1.0,
+          'currency': 'USD',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script> -->
+    <script>
   function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
+    // Open a tab immediately (allowed on iOS because it's in the click gesture)
+    var newTab = window.open('', '_blank');
+
+    var navigated = false;
+    function navigate() {
+      if (navigated) return;
+      navigated = true;
+
+      if (newTab) {
+        newTab.location.href = url;
+      } else {
+        window.location.href = url;
       }
-    };
+    }
+
+    // If gtag isn't available (blocked/slow), just go right away
+    if (typeof gtag !== 'function') {
+      navigate();
+      return false;
+    }
+
     gtag('event', 'conversion', {
-        'send_to': 'AW-17747888998/fa7pCN-M_cMbEOaW7Y5C',
-        'value': 1.0,
-        'currency': 'USD',
-        'event_callback': callback
+      'send_to': 'AW-17747888998/fa7pCN-M_cMbEOaW7Y5C',
+      'value': 1.0,
+      'currency': 'USD',
+      'event_callback': navigate,
+      'event_timeout': 2000
     });
+
+    // Extra failsafe in case callback never fires
+    setTimeout(navigate, 2000);
+
     return false;
   }
   </script>
 
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD46GSVS"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <h1>Python, Deep Learning, and LLMs:<br>A Crash Course for Complete Beginners</h1>
   <p style="margin-top:9px; font-size:1.1em;">
@@ -124,7 +157,7 @@
   </p>
   <img src="./assets/python2llms.jpg" alt="Book cover" class="cover">
   <p>
-    <a class="amazon" href="https://www.amazon.com/dp/1733902201" onclick="return gtag_report_conversion('https://www.amazon.com/dp/1733902201');" target="_blank">Buy on Amazon</a>
+    <a class="amazon" href="https://www.amazon.com/dp/1733902201" onclick="return gtag_report_conversion(this.href);" rel="noopener">Buy on Amazon</a>
   </p>
   <p>
     This book is a coding and machine learning bootcamp in textbook form. You will get hands-on experience with the Python programming language, essential math concepts, neural nets – and, by the end, you will have coded and trained a pocket-sized language model. A high school math background is all you need to get started; no prior programming experience is required. Put in the work, and soon you will know, in concrete detail, how to create a miniature mind inside a chunk of silicon using code. If that is not magic, what is?
@@ -148,9 +181,7 @@
 <h2>Contents</h2>
 
   <p>
-    The <a href="https://www.amazon.com/dp/1733902201" 
-    onclick="return gtag_report_conversion('https://www.amazon.com/dp/1733902201');"
-    target="_blank">print version</a> is available on Amazon.</p> 
+    The <a class="amazon" href="https://www.amazon.com/dp/1733902201" onclick="return gtag_report_conversion(this.href);" rel="noopener">print version</a> is available on Amazon.</p> 
 
   <p>
     PDFs of the book contents are provided for free for non-commercial use only. You can get the <a href="https://www.dropbox.com/scl/fi/37cypp61gtneontnp8gll/python2llms.pdf?rlkey=mkab6q29mdbigdtdlhrg7slqe&dl=1">full book</a> as a single PDF. Alternatively, you can download individual book sections:
