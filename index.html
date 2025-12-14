@@ -138,11 +138,10 @@
       'value': 1.0,
       'currency': 'USD',
       'event_callback': navigate,
-      'event_timeout': 100
     });
 
     // Extra failsafe in case callback never fires
-    setTimeout(navigate, 100);
+    setTimeout(navigate, 250);
 
     return false;
   }
