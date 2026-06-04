@@ -94,61 +94,6 @@
 
   <meta name="p:domain_verify" content="a7010727edba23b0763472f0aa448cc8"/>
 
-  <!-- Event snippet for Outbound click conversion page
-  In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-  <!--   <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-17747888998/fa7pCN-M_cMbEOaW7Y5C',
-          'value': 1.0,
-          'currency': 'USD',
-          'event_callback': callback
-      });
-      return false;
-    }
-    </script> -->
-<!--     <script>
-  function gtag_report_conversion(url) {
-    // Open a tab immediately (allowed on iOS because it's in the click gesture)
-    var newTab = window.open('', '_blank');
-
-    var navigated = false;
-    function navigate() {
-      if (navigated) return;
-      navigated = true;
-
-      if (newTab) {
-        newTab.location.href = url;
-      } else {
-        window.location.href = url;
-      }
-    }
-
-    // If gtag isn't available (blocked/slow), just go right away
-    if (typeof gtag !== 'function') {
-      navigate();
-      return false;
-    }
-
-    gtag('event', 'conversion', {
-      'send_to': 'AW-17747888998/fa7pCN-M_cMbEOaW7Y5C',
-      'value': 1.0,
-      'currency': 'USD',
-      'event_callback': navigate,
-    });
-
-    // Extra failsafe in case callback never fires
-    setTimeout(navigate, 250);
-
-    return false;
-  }
-  </script> -->
-
 </head>
 <body>
 
